@@ -14,12 +14,12 @@ window.onload = function() {
   var mp3 = document.getElementById('mashup');
   var playButton = document.getElementsByClassName('btn-container')[0];
   var slideSrc = document.getElementById('slideSrc');
+  var container = document.getElementById('container');
 
   playButton.addEventListener('click', () => {
     var src = parseIFrame(slideSrc.value);
     if (src.length === 0) return;
-    playButton.classList.add('hidden');
-    slideSrc.classList.add('hidden');
+    container.classList.add('hidden');
 
     var iframeDom = document.createElement('iframe');
     iframeDom.id = 'slideshow';
